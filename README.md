@@ -1,3 +1,2 @@
-# E-commerceCourses
-Works of e-commerce courses
-Produced in 2015.
+# E-commerce Courses
+A project of e-commerce courses produced in 2015.
