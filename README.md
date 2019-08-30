@@ -1,2 +1,2 @@
 # E-commerce Courses
-A project of e-commerce courses produced in 2015.
+大學三年級的電子商務課程的期末專題。
