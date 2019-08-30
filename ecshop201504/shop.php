@@ -1,6 +1,6 @@
 <?php
 	include("mysql_connect.inc.php");
-    include("logo.php");
+	include("logo.php");
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -10,7 +10,7 @@
 -->
 <html>
 	<head>
-        <?php echo $showlogo ?>
+		<?php echo $showlogo ?>
 		<title>Shop - BabyLove</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
@@ -36,7 +36,7 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate.css" />
-
+	
 		<!-- adder list -->
 		<!--<link href="css/bootstrap1.css" rel='stylesheet' type='text/css' />
 		<!-- jQuery (necessary JavaScript plugins) -->
@@ -70,7 +70,7 @@
 		<!-- /adder -->
 	</head>
 	<body id="top">
-
+		
 		<!-- Header -->
 			<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
@@ -85,60 +85,60 @@
 						<li><a href="login.php" class="button special">Sign In</a></li>
 					</ul>
 				</nav>
-        	</header>
+			</header>
 			<!-- Main -->
 			<body>
 				<!-- adverts wall -->
 				<div id="home">
-          <!-- Start cSlider -->
-            <div id="da-slider" class="da-slider">
-                <div class="triangle"></div>
-                <!-- mask elemet use for masking background image -->
-                <div class="mask"></div>
-                <!-- All slides centred in container element -->
-                <div class="container">
-									<!-- Start slide -->
-									<?php
-									$result = mysql_query("SELECT * FROM Products ORDER BY ProductID DESC LIMIT 3");
-									$number = 1;
-									while($row = mysql_fetch_array($result)){
-										//printf ("ID: %s Name: %s", $row["ProductID"], $row["Name"]);
-										echo "<div class='da-slide'>";
-										echo "<h2 class='fittext2'>" ;
-										echo $row["Name"];
-										echo "</h2>";
-										echo "<h4>";
-										echo $row["Slogan"];
-										echo "</h4>";
-										echo "<p>";
-										echo $row["Description"];
-										echo "</p>";
-										echo "<a href='addItem.php?sn=";
-										echo $row["ProductID"];
-										echo "' class='da-link button'>Add to cart</a>";
-										echo "<div class='da-img'>";
-										echo "<img src='images/image/";
-										echo $row["ProductID"];
-										echo ".png' alt='image0";
-										echo $number;
-										echo "'>";
-										echo "</div>";
-										echo "</div>";
-
-										$number=$number+1;
-									}
-
-									mysql_free_result($result);
-									?>
-                  <!-- Start cSlide navigation arrows -->
-                  <div class="da-arrows">
-                      <span class="da-arrows-prev"></span>
-                      <span class="da-arrows-next"></span>
-                  </div>
-                    <!-- End cSlide navigation arrows -->
-                </div>
-            </div>
-        </div>
+		<!-- Start cSlider -->
+			<div id="da-slider" class="da-slider">
+				<div class="triangle"></div>
+				<!-- mask elemet use for masking background image -->
+				<div class="mask"></div>
+				<!-- All slides centred in container element -->
+				<div class="container">
+					<!-- Start slide -->
+					<?php
+					$result = mysql_query("SELECT * FROM Products ORDER BY ProductID DESC LIMIT 3");
+					$number = 1;
+					while($row = mysql_fetch_array($result)){
+						printf ("ID: %s Name: %s", $row["ProductID"], $row["Name"]);
+						echo "<div class='da-slide'>";
+						echo "<h2 class='fittext2'>" ;
+						echo $row["Name"];
+						echo "</h2>";
+						echo "<h4>";
+						echo $row["Slogan"];
+						echo "</h4>";
+						echo "<p>";
+						echo $row["Description"];
+						echo "</p>";
+						echo "<a href='addItem.php?sn=";
+						echo $row["ProductID"];
+						echo "' class='da-link button'>Add to cart</a>";
+						echo "<div class='da-img'>";
+						echo "<img src='images/image/";
+						echo $row["ProductID"];
+						echo ".png' alt='image0";
+						echo $number;
+						echo "'>";
+						echo "</div>";
+						echo "</div>";
+		
+						$number=$number+1;
+					}
+		
+					mysql_free_result($result);
+					?>
+				<!-- Start cSlide navigation arrows -->
+				<div class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>
+				</div>
+					<!-- End cSlide navigation arrows -->
+				</div>
+			</div>
+		</div>
 				<!-- /adverts wall -->
 				<!-- selection icon -->
 				<ul class="megamenu skyblue">
@@ -149,7 +149,7 @@
 					<li><a class="color7" href="#">Food</a></li>
 					<li><a class="color8" href="#">Appliance</a></li>
 					<li><a class="color9" href="#">Adornment</a></li>
-				 </ul>
+				</ul>
 				<!-- /selection icon -->
 				<div class="col-sm-5 right">
 				<script>
